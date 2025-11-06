@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="ring" android:innerRadiusRatio="2.5" android:thicknessRatio="20" android:useLevel="false">
+            <solid android:color="#3303A9F4" /> <!-- Light blue background -->
+        </shape>
+    </item>
+    <item>
+        <rotate>
+            <shape android:shape="ring" android:innerRadiusRatio="2.5" android:thicknessRatio="20" android:useLevel="true">
+                <solid android:color="#000000" /> <!-- Blue progress -->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

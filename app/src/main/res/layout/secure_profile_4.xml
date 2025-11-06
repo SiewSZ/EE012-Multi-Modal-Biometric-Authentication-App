@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecureProfile4Activity">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <ImageView
+            android:id="@+id/BackArrow4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/IDescription1"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/BackArrow4"
+            app:layout_constraintStart_toEndOf="@+id/BackArrow4"
+            app:layout_constraintTop_toTopOf="@+id/BackArrow4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SProfile"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Step4" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="0dp"
+        android:progress="100"
+        android:progressTint="#0D0D0D" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Voice Icon and Title -->
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="82dp"
+            android:background="@drawable/icon_background"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/voice"
+                app:tint="@android:color/black"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/Voice"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/instructionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/instructions"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/numbersToSayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="16dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/numbersToSayText" />
+
+        <!-- This View pushes the buttons to the bottom -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!--
+        =======================================================
+        FINAL CORRECTED BUTTON SECTION
+        This contains BOTH buttons required by the Kotlin code.
+        =======================================================
+        -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Button 1: For Number Validation -->
+            <FrameLayout
+                android:id="@+id/voiceActionButton"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/circle_button_background"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/voiceActionButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/push_to_talk"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Button 2: For Final Voice Recording (Initially Hidden) -->
+            <FrameLayout
+                android:id="@+id/recordFinalVoiceButton"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/rounded_green_button"
+                android:visibility="gone"
+                tools:visibility="visible"> <!-- tools:visibility lets you see it in the design preview -->
+
+                <TextView
+                    android:id="@+id/recordFinalVoiceButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Record Voice"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

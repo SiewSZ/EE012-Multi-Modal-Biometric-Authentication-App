@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8EEEC"
+    tools:context=".MainPageActivity">
+
+    <!-- Header Section -->
+    <ImageView
+        android:id="@+id/headerBackground"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_background" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="Hello,"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="User"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+    <!-- Action Buttons Panel -->
+    <LinearLayout
+        android:id="@+id/actionsPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/white_background"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBackground">
+
+        <!-- Each button is a separate, clickable layout -->
+        <LinearLayout
+            android:id="@+id/passwordButton"
+            style="@style/MainActionButton">
+            <ImageView
+                style="@style/MainActionButtonIcon"
+                android:src="@drawable/manage" />
+            <TextView
+                style="@style/MainActionButtonText"
+                android:text="Password" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notificationButton"
+            style="@style/MainActionButton">
+            <ImageView
+                style="@style/MainActionButtonIcon"
+                android:src="@drawable/notification" />
+            <TextView
+                style="@style/MainActionButtonText"
+                android:text="Notification" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logoutButton"
+            style="@style/MainActionButton">
+            <ImageView
+                android:id="@+id/another_image_view"
+                style="@style/MainActionButtonIcon"
+                android:src="@drawable/logout" />
+            <TextView
+                style="@style/MainActionButtonText"
+                android:text="Logout" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Scrollable Content Below Header -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionsPanel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/search_edit_background"
+                android:drawableEnd="@drawable/search_icon"
+                android:drawablePadding="12dp"
+                android:hint="Search for services..."
+                android:inputType="text"
+                android:paddingHorizontal="16dp" />
+
+            <!-- Banner -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_banner">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADVERTISEMENT"
+                    android:textColor="#0F0F0F"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Grid of Services -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Popular Services"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="4"
+                android:rowCount="2">
+
+                <!-- Row 1 -->
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/dbs" />
+                    <TextView style="@style/ServiceGridText" android:text="DBS Paylah" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/microsoft" />
+                    <TextView style="@style/ServiceGridText" android:text="Microsoft" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/singpass" />
+                    <TextView style="@style/ServiceGridText" android:text="Singpass" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/simplygo" />
+                    <TextView style="@style/ServiceGridText" android:text="SimplyGo" />
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/dbs" />
+                    <TextView style="@style/ServiceGridText" android:text="DBS Paylah" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/dbs" />
+                    <TextView style="@style/ServiceGridText" android:text="DBS Paylah" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/dbs" />
+                    <TextView style="@style/ServiceGridText" android:text="DBS Paylah" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ServiceGridItem">
+                    <ImageView style="@style/ServiceGridIcon" android:src="@drawable/dbs" />
+                    <TextView style="@style/ServiceGridText" android:text="DBS Paylah" />
+                </LinearLayout>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

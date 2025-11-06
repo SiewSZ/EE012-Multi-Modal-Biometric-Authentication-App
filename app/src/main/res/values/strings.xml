@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SecureX</string>
+    <string name="name">Email</string>
+    <string name="welcome_nback">Welcome\nBack</string>
+    <string name="RName">Enter your email</string>
+    <string name="SProfile">Create Your Secure Profile</string>
+    <string name="Step1">Step 1 of 4</string>
+    <string name="Step2">Step 2 of 4</string>
+    <string name="ITitle1">Email</string>
+
+    <string name="MTitle1">Personal Info</string>
+    <string name="MTitle2">Eye</string>
+    <string name="MTitle3">Image</string>
+
+    <string name="InnTitle1">Enter your password</string>
+    <string name="InnTitle2">Password</string>
+    <string name="Continue">Continue</string>
+    <string name="IDescription1">Return</string>
+    <string name="CaptureImage">Capture</string>
+
+
+    <string name="MainPage1">User Info</string>
+    <string name="MainPage2">Face Profile</string>
+
+    <string name="face_outline_guide">A guide to position your face in the center</string>
+
+    <string name="appname">SecureX</string>
+    <string name="face_outline">This is the face outline</string>
+    <string name="FinalImage">This is the final image</string>
+
+    <string name="Step3">Step 3 of 4</string>
+    <string name="MTitle4">Your Palm Profile</string>
+    <string name="palm_outline">This is the palm outline</string>
+    <string name="FinalPalm">This is the final palm image</string>
+    <string name="Finish">Finish</string>
+    <string name="next_step">Next Step</string>
+
+    <string name="Step4">Step 4 of 4</string>
+    <string name="Voice">Voice Profile</string>
+    <string name="instructions">When ready, press the button and clearly say all the numbers from 1 to 10.</string>
+    <string name="numbersToSayText">1–2–3–4–5–6–7–8–9–10</string>
+    <string name="push_to_talk">Push to Talk</string>
+    <string name="recording_in_progress">Recording…\n(Press to Stop)</string>
+    <string name="recording_saved">Recording Saved!</string>
+    <string name="secure_profile_created">Secure Profile Created!</string>
+
+</resources>

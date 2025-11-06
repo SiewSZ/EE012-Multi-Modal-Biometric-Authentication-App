@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Base application theme.
+      FIX: Parent is set to "Theme.MaterialComponents.Light..." to support
+      Material components and enforce a light theme.
+    -->
+    <style name="Theme.EE012" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- You can customize your theme's colors, fonts, etc. here -->
+        <!-- For example: -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+</resources>
+    

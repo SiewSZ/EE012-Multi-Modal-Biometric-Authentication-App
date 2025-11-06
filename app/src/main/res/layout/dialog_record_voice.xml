@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press the button and say the number:"
+        android:textSize="16sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/numberToRecordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="'One'"/>
+
+    <!-- The button to start/stop recording -->
+    <Button
+        android:id="@+id/dialogRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Record"/>
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="24dp"
+    tools:context=".SummaryActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Authentication Summary"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/resultsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        android:divider="@drawable/divider_empty_54dp"
+        android:showDividers="middle">
+
+        <!-- ROW 1: Login & Fingerprint -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/brown_background"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/password"
+                app:tint="#4CAF50"
+                android:background="@drawable/icon_background"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="Login &amp; Fingerprint"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Success"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- =============================================================== -->
+        <!-- ROW 2: FACE VERIFICATION (THE MISSING ROW) -->
+        <!-- =============================================================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_empty_54dp"
+            android:background="@drawable/brown_background"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/face_outline"
+                app:tint="#000000"
+                android:background="@drawable/icon_background"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="Face Verification"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ProgressBar
+                    android:id="@+id/faceProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:rotation="-90"
+                    tools:progress="95" />
+
+                <TextView
+                    android:id="@+id/faceScoreText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="95%" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- ROW 3: Palm Verification -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_empty_54dp"
+            android:background="@drawable/brown_background"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/palm_outline"
+                app:tint="#000000"
+                android:background="@drawable/icon_background"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="Palm Verification"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ProgressBar
+                    android:id="@+id/palmProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:rotation="-90"
+                    tools:progress="85" />
+
+                <TextView
+                    android:id="@+id/palmScoreText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="85%" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- ROW 4: Voice Verification -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_empty_54dp"
+            android:background="@drawable/brown_background"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/voice"
+                app:tint="#000000"
+                android:background="@drawable/icon_background"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="Voice Verification"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ProgressBar
+                    android:id="@+id/voiceProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:rotation="-90"
+                    tools:progress="92" />
+
+                <TextView
+                    android:id="@+id/voiceScoreText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="92%" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/proceedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="PROCEED"
+        android:textSize="18sp"
+        app:cornerRadius="30dp" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882325965451",
+    "project_id": "ee012-multimodalauthentication",
+    "storage_bucket": "ee012-multimodalauthentication.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882325965451:android:9bb9bd4c08559ee6d0628e",
+        "android_client_info": {
+          "package_name": "com.example.ee012"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiW2LwCDbW6vLe6j2PjOKjo_f2uUMa0Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
