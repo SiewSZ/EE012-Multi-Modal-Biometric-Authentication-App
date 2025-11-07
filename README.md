@@ -14,6 +14,9 @@ To install and run this program,
 
 
 Summary of the Codes:
+
 KOTLIN FILE: All the logic and implementation of the layout
+
 RES -> Layout: All the files that define the layouts constraints of our app
+
 Python File: All the authentication modules implemented
